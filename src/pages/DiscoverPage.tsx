@@ -32,7 +32,7 @@ export default function DiscoverPage() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://ism-server.onrender.com/api/ideas?page=${currentPage}&limit=${ITEMS_PER_PAGE}`
+        `https://ism-serverv2.onrender.com/api/ideas?page=${currentPage}&limit=${ITEMS_PER_PAGE}`
       );
       if (!response.ok) {
         const message = await response.text();

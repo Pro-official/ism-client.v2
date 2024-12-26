@@ -31,7 +31,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const login = useCallback(async (email: string, password: string) => {
     try {
       const response = await fetch(
-        "https://ism-server.onrender.com/api/users/login",
+        "https://ism-serverv2.onrender.com/api/users/login",
         {
           method: "POST",
           headers: {

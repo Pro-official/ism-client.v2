@@ -32,7 +32,7 @@ export default function RegisterModal({ onClose }: RegisterModalProps) {
 
     try {
       const response = await fetch(
-        "https://ism-server.onrender.com/api/users",
+        "https://ism-serverv2.onrender.com/api/users",
         {
           method: "POST",
           headers: {

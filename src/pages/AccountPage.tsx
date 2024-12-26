@@ -28,7 +28,7 @@ export default function AccountPage() {
         throw new Error("User is not authenticated");
       }
       const response = await fetch(
-        `https://ism-server.onrender.com/api/ideas/${user._id}/my-ideas`
+        `https://ism-serverv2.onrender.com/api/ideas/${user._id}/my-ideas`
       );
       if (!response.ok) {
         const message = await response.text();

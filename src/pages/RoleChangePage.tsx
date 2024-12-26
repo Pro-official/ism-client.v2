@@ -29,7 +29,7 @@ export default function RoleChangePage() {
         throw new Error("User is not authenticated.");
       }
       const response = await fetch(
-        `https://ism-server.onrender.com/api/users/change-role`,
+        `https://ism-serverv2.onrender.com/api/users/change-role`,
         {
           method: "PATCH",
           headers: {

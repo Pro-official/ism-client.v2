@@ -31,7 +31,7 @@ export default function IdeaForm() {
 
     try {
       const response = await fetch(
-        "https://ism-server.onrender.com/api/ideas",
+        "https://ism-serverv2.onrender.com/api/ideas",
         {
           method: "POST",
           headers: {
