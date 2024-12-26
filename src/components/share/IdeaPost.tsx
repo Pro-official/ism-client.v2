@@ -47,13 +47,13 @@ export default function IdeaPost({
         className="text-white/90 mb-8"
         dangerouslySetInnerHTML={{ __html: truncateText(content, 250) }}
       />
-      {banner && (
+      {/* {banner && (
         <img
           src={convertGoogleDriveLink(banner)}
           alt={title}
           className="mt-4 rounded-xl w-full max-h-96 object-cover"
         />
-      )}
+      )} */}
 
       <div className="flex items-center gap-4 mt-4 pt-4 border-t border-white/50">
         <button className="flex items-center gap-2 text-gray-400 hover:text-pink-500 transition-colors">

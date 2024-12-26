@@ -105,7 +105,7 @@ export default function CommentSection({
           <motion.button
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="px-6 py-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-white/90 font-medium hover:from-green-600 hover:to-pink-600 transition-colors flex items-center gap-2"
+            className="px-6 py-2 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-white/90 font-medium hover:from-green-600 hover:to-green-500 transition-colors flex items-center gap-2"
           >
             <Send className="w-4 h-4" />
             Comment

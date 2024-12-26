@@ -135,14 +135,12 @@ export default function IdeaPage() {
                 </div>
               )}
               <div className="flex items-center gap-3">
-                {user?.role !== "Employee" && (
-                  <StatusBadge
-                    ideaName={idea?.title}
-                    ideaId={idea._id}
-                    type="collaborate"
-                    onStatusChange={handleStatusChange}
-                  />
-                )}
+                <StatusBadge
+                  ideaName={idea?.title}
+                  ideaId={idea._id}
+                  type="collaborate"
+                  onStatusChange={handleStatusChange}
+                />
                 {user?.role === "Innovation" && (
                   <StatusBadge
                     ideaName={idea?.title}
@@ -157,11 +155,11 @@ export default function IdeaPage() {
               {idea.title}
             </h1>
           </div>
-          <img
+          {/* <img
             src={convertGoogleDriveLink(idea.banner)}
             alt={idea.title}
             className="w-full h-[400px] object-cover"
-          />
+          /> */}
           <div className="p-8">
             <div
               className="text-white/90 mb-8"

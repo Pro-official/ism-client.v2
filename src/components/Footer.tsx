@@ -1,5 +1,5 @@
 import React from "react";
-import { Lightbulb, Twitter, Linkedin, Github } from "lucide-react";
+import { BrainCircuit, Twitter, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <Lightbulb className="h-8 w-8 text-green-500" />
+              <BrainCircuit className="h-8 w-8 text-green-500" />
               <span className="ml-2 text-xl font-bold bg-gradient-to-r from-green-400 to-pink-500 text-transparent bg-clip-text">
                 IdeaShare
               </span>

@@ -9,6 +9,7 @@ import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import IdeaPage from "../pages/IdeaPage";
+import AccountPage from "../pages/AccountPage";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
         <Route path="register" element={<RegisterPage />} />
         <Route path="discover" element={<DiscoverPage />} />
         <Route path="share" element={<SharePage />} />
+        <Route path="/account" element={<AccountPage />} />
         <Route path="idea/:ideaId" element={<IdeaPage />} />
         <Route path="role-change" element={<RoleChangePage />} />
         <Route

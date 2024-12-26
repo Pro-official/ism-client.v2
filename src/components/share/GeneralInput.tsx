@@ -1,4 +1,4 @@
-import { Image, Lightbulb } from "lucide-react";
+import { Image, BrainCircuit } from "lucide-react";
 
 interface GeneralInputProps {
   value: string;
@@ -26,7 +26,7 @@ export default function GeneralInput({
         {inputType === "image" ? (
           <Image className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
         ) : (
-          <Lightbulb className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+          <BrainCircuit className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
         )}
       </div>
     </div>

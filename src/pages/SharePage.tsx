@@ -1,7 +1,6 @@
 import { useState, useEffect, lazy, Suspense, useCallback } from "react";
 import { motion } from "framer-motion";
 import IdeaForm from "../components/share/IdeaForm";
-// import PremiumCard from "../components/share/PremiumCard";
 import TrendingTopics from "../components/share/TrendingTopics";
 import LoadingSpinner from "../components/share/LoadingSpinner";
 import { Idea } from "../types/Idea";
@@ -82,13 +81,13 @@ export default function SharePage() {
       <div className="grid lg:max-w-7xl mx-auto grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <IdeaForm />
-          <Suspense fallback={<LoadingSpinner />}>
+          {/* <Suspense fallback={<LoadingSpinner />}>
             {postedIdeas.map((idea) => (
               <Link key={idea._id} to={`/idea/${idea._id}`}>
                 <IdeaPost {...idea} />
               </Link>
             ))}
-          </Suspense>
+          </Suspense> */}
         </div>
         <div className="space-y-6">
           {/* <PremiumCard /> */}

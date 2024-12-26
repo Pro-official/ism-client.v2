@@ -4,7 +4,7 @@ import GeneralInput from "./GeneralInput";
 import { useEditor } from "../../hooks/useEditor";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-import { Link, Smile, Send } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function IdeaForm() {
   const [content, setContent] = useState("");
@@ -19,7 +19,7 @@ export default function IdeaForm() {
     e.preventDefault();
     setError("");
 
-    if (!title || !content || !banner) {
+    if (!title || !content) {
       setError("Please fill all the fields.");
       return;
     }
@@ -57,7 +57,7 @@ export default function IdeaForm() {
       setTitle("");
       // Focus editor after submission
       focusEditor();
-      navigate("/discover", { replace: true });
+      navigate("/account", { replace: true });
     } catch (error: unknown) {
       let errorMessage = "Failed to create account";
       if (error instanceof Error) {
@@ -72,7 +72,7 @@ export default function IdeaForm() {
   };
 
   return (
-    <div className="bg-black/10 backdrop-blur-lg rounded-xl p-6 border border-white/50">
+    <div className="bg-black/10 backdrop-blur-lg mt-10 rounded-xl p-6 border border-white/50">
       {error && (
         <div className="mb-4 p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500">
           {error}
@@ -94,25 +94,7 @@ export default function IdeaForm() {
         />
 
         <div className="flex items-center gap-4 mt-8">
-          <GeneralInput
-            inputType="image"
-            placeHolder="Add media URL (image, gif)"
-            value={banner}
-            onChange={setBanner}
-          />
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="p-2 hover:bg-black/10/10 rounded-full transition-colors"
-            >
-              <Link className="h-5 w-5 text-gray-400" />
-            </button>
-            <button
-              type="button"
-              className="p-2 hover:bg-black/10/10 rounded-full transition-colors"
-            >
-              <Smile className="h-5 w-5 text-gray-400" />
-            </button>
             <button
               onClick={handleSubmit}
               type="submit"
